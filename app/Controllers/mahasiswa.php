@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Mahasiswa extends BaseController
 {
-    public function index(): string
+    public function Data_Mahasiswa(): string
     {
         $data = [
             'title' => 'Data Mahasiswa'

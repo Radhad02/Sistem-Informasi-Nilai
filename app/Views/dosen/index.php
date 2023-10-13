@@ -5,12 +5,12 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Data Mahasiswa</h1>
+        <h1>Data Dosen</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Mahasiswa</li>
-                <li class="breadcrumb-item active">Data Mahasiswa</li>
+                <li class="breadcrumb-item">Dosen</li>
+                <li class="breadcrumb-item active">Data Dosen</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -27,11 +27,12 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">Nim</th>
+                                        <th scope="col">NIDN</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">Alamat</th>
                                         <th scope="col">Tanggal Lahir</th>
                                         <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Kontak</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
@@ -43,6 +44,7 @@
                                         <td>Jl. Keabadian</td>
                                         <td>12-05-1998</td>
                                         <td>Laki-Laki</td>
+                                        <td>0893238437438</td>
                                         <td>
                                             <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
                                                 <i class="ri-edit-box-line"></i>

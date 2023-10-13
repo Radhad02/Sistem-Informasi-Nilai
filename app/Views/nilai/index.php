@@ -5,12 +5,12 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Data Mahasiswa</h1>
+        <h1>Data Nilai</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Mahasiswa</li>
-                <li class="breadcrumb-item active">Data Mahasiswa</li>
+                <li class="breadcrumb-item">Nilai</li>
+                <li class="breadcrumb-item active">Data Nilai</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -23,26 +23,28 @@
                         <h5 class="card-title">Default Table</h5>
                         <div class="table-responsive">
                             <!-- Default Table -->
-                            <table class="table">
+                            <table style="text-align: center;" class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No</th>
+                                        <th scope="col">Id</th>
                                         <th scope="col">Nim</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Alamat</th>
-                                        <th scope="col">Tanggal Lahir</th>
-                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Kehadiran</th>
+                                        <th scope="col">Tugas</th>
+                                        <th scope="col">Mid Semester</th>
+                                        <th scope="col">Final Semester</th>
+                                        <th scope="col">Keterangan</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
+                                    <tr style="vertical-align: middle;">
+                                        <th>1</th>
                                         <td>212395</td>
-                                        <td>Coba</td>
-                                        <td>Jl. Keabadian</td>
-                                        <td>12-05-1998</td>
-                                        <td>Laki-Laki</td>
+                                        <td>15</td>
+                                        <td>30</td>
+                                        <td>23</td>
+                                        <td>23</td>
+                                        <td>A</td>
                                         <td>
                                             <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
                                                 <i class="ri-edit-box-line"></i>

@@ -5,12 +5,12 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Data Mahasiswa</h1>
+        <h1>Data Mata Kuliah</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Mahasiswa</li>
-                <li class="breadcrumb-item active">Data Mahasiswa</li>
+                <li class="breadcrumb-item">Mata Kuliah</li>
+                <li class="breadcrumb-item active">Data Mata Kuliah</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -26,23 +26,19 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">Nim</th>
+                                        <th scope="col">Kode</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Alamat</th>
-                                        <th scope="col">Tanggal Lahir</th>
-                                        <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">SKS</th>
+                                        <th scope="col">Nama Dosen</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
+                                        <th>1</th>
                                         <td>212395</td>
                                         <td>Coba</td>
                                         <td>Jl. Keabadian</td>
-                                        <td>12-05-1998</td>
-                                        <td>Laki-Laki</td>
                                         <td>
                                             <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
                                                 <i class="ri-edit-box-line"></i>
