@@ -24,41 +24,36 @@
                         <h5 class="card-title">Input Data</h5>
 
                         <!-- General Form Elements -->
-                        <form>
+                        <form action="/nilai/save" method="post">
                             <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Kode</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Kehadiran</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="212395_Kehadiran" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Tugas</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="212395_Tugas" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label for="inputText" class="col-sm-2 col-form-label">Mid Semester</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="212395_Mid" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Jumlah SKS</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Final Semester</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>---Pilih Jumlah SKS---</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="2">3</option>
-                                        <option value="2">4</option>
-                                    </select>
+                                    <input type="text" name="212395_Final" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputText" class="col-sm-2 col-form-label">Nama Dosen</label>
+                                <label for="inputText" class="col-sm-2 col-form-label">Keterangan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Disabled</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
+                                    <input type="text" name="212395_Keterangan" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-4">

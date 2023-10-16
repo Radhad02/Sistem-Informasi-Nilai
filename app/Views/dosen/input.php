@@ -24,53 +24,48 @@
                         <h5 class="card-title">Input Data Dosen</h5>
 
                         <!-- General Form Elements -->
-                        <form>
+                        <form action="/dosen/save" method="post">
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">NIDN</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="212395_NIDN" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="212395_Nama" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Alamat</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="212395_Alamat" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputDate" class="col-sm-2 col-form-label">Tanggal lahir</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control">
+                                    <input type="date" name="212395_Tanggal_Lahir" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
                                 <div class="col-sm-10">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select name="212395_jkl" class="form-select" aria-label="Default select example">
                                         <option selected>---Pilih---</option>
-                                        <option value="1">Laki-Laki</option>
-                                        <option value="2">Perempuan</option>
+                                        <option name="212395_jkl" value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputNumber" class="col-sm-2 col-form-label">Kontak</label>
                                 <div class="col-sm-10">
-                                    <input type="number" class="form-control">
+                                    <input type="number" name="212395_Kontak" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Disabled</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" value="Read only / Disabled" disabled>
-                                </div>
-                            </div>
+
                             <div class="row mb-4">
                                 <div style="margin-top: 8px;" class="col-sm-10">
                                     <button type="submit" class="btn btn-primary">Simpan</button>

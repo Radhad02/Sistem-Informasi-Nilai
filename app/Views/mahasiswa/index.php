@@ -32,26 +32,31 @@
                                         <th scope="col">Alamat</th>
                                         <th scope="col">Tanggal Lahir</th>
                                         <th scope="col">Jenis Kelamin</th>
+                                        <th scope="col">Jurusan</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>212395</td>
-                                        <td>Coba</td>
-                                        <td>Jl. Keabadian</td>
-                                        <td>12-05-1998</td>
-                                        <td>Laki-Laki</td>
-                                        <td>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
-                                                <i class="ri-edit-box-line"></i>
-                                            </a>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                <i class="bi-trash-fill"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1 + (10 * ($currentPage - 1)); ?>
+                                    <?php foreach ($datamahasiswa as $ds) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><?= $ds['212395_Nim']; ?></td>
+                                            <td><?= $ds['212395_Nama']; ?></td>
+                                            <td><?= $ds['212395_Alamat']; ?></td>
+                                            <td><?= $ds['212395_Tanggal_Lahir']; ?></td>
+                                            <td><?= $ds['212395_Jkl']; ?></td>
+                                            <td><?= $ds['212395_Jurusan']; ?></td>
+                                            <td>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
+                                                    <i class="ri-edit-box-line"></i>
+                                                </a>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
+                                                    <i class="bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                             <!-- End Default Table Example -->

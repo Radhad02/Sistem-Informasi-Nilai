@@ -26,7 +26,7 @@
                             <table style="text-align: center;" class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Id</th>
+                                        <th scope="col">No</th>
                                         <th scope="col">Nim</th>
                                         <th scope="col">Kehadiran</th>
                                         <th scope="col">Tugas</th>
@@ -37,23 +37,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr style="vertical-align: middle;">
-                                        <th>1</th>
-                                        <td>212395</td>
-                                        <td>15</td>
-                                        <td>30</td>
-                                        <td>23</td>
-                                        <td>23</td>
-                                        <td>A</td>
-                                        <td>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
-                                                <i class="ri-edit-box-line"></i>
-                                            </a>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                <i class="bi-trash-fill"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1 + (10 * ($currentPage - 1)); ?>
+                                    <?php foreach ($datanilai as $ds) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><?= $ds['212395_Nim']; ?></td>
+                                            <td><?= $ds['212395_Kehadiran']; ?></td>
+                                            <td><?= $ds['212395_Tugas']; ?></td>
+                                            <td><?= $ds['212395_Mid']; ?></td>
+                                            <td><?= $ds['212395_Final']; ?></td>
+                                            <td><?= $ds['212395_Keterangan']; ?></td>
+                                            <td>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
+                                                    <i class="ri-edit-box-line"></i>
+                                                </a>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
+                                                    <i class="bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                             <!-- End Default Table Example -->

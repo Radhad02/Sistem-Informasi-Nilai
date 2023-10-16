@@ -74,7 +74,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/matkul/input">
+                    <a href="/nilai/input">
                         <i class="bi bi-circle"></i><span>Tambah Data</span>
                     </a>
                 </li>

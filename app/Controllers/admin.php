@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class admin extends BaseController
 {
-    public function index(): string
+    public function index()
     {
         $data = [
             'title' => 'Beranda Utama'

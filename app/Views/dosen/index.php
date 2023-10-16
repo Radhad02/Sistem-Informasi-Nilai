@@ -37,23 +37,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>212395</td>
-                                        <td>Coba</td>
-                                        <td>Jl. Keabadian</td>
-                                        <td>12-05-1998</td>
-                                        <td>Laki-Laki</td>
-                                        <td>0893238437438</td>
-                                        <td>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
-                                                <i class="ri-edit-box-line"></i>
-                                            </a>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                <i class="bi-trash-fill"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1 + (10 * ($currentPage - 1)); ?>
+                                    <?php foreach ($datadosen as $ds) : ?>
+                                        <tr>
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><?= $ds['212395_NIDN']; ?></td>
+                                            <td><?= $ds['212395_Nama']; ?></td>
+                                            <td><?= $ds['212395_Alamat']; ?></td>
+                                            <td><?= $ds['212395_Tanggal_Lahir']; ?></td>
+                                            <td><?= $ds['212395_jkl']; ?></td>
+                                            <td><?= $ds['212395_Kontak']; ?></td>
+                                            <td>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
+                                                    <i class="ri-edit-box-line"></i>
+                                                </a>
+                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
+                                                    <i class="bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                             <!-- End Default Table Example -->
