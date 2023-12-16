@@ -9,8 +9,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Nilai</li>
-                <li class="breadcrumb-item active">Data Nilai</li>
+                <li class="breadcrumb-item active">Nilai</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -20,40 +19,35 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Default Table</h5>
+                        <h5 class="card-title">Pilih Kelas</h5>
                         <div class="table-responsive">
                             <!-- Default Table -->
                             <table style="text-align: center;" class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
-                                        <th scope="col">Nim</th>
-                                        <th scope="col">Kehadiran</th>
-                                        <th scope="col">Tugas</th>
-                                        <th scope="col">Mid Semester</th>
+                                        <th scope="col">Kelas</th>
+                                        <th scope="col">Nama Mata Kuliah</th>
+                                        <th scope="col">Dosen</th>
+                                        <!-- <th scope="col">Mid Semester</th>
                                         <th scope="col">Final Semester</th>
-                                        <th scope="col">Keterangan</th>
+                                        <th scope="col">Keterangan</th> -->
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $i = 1 + (10 * ($currentPage - 1)); ?>
-                                    <?php foreach ($datanilai as $ds) : ?>
+                                    <?php foreach ($dosen as $ds) : ?>
                                         <tr>
                                             <th scope="row"><?= $i++; ?></th>
-                                            <td><?= $ds['212395_Nim']; ?></td>
-                                            <td><?= $ds['212395_Kehadiran']; ?></td>
-                                            <td><?= $ds['212395_Tugas']; ?></td>
-                                            <td><?= $ds['212395_Mid']; ?></td>
-                                            <td><?= $ds['212395_Final']; ?></td>
-                                            <td><?= $ds['212395_Keterangan']; ?></td>
+                                            <td><?= $ds['kode']; ?></td>
+                                            <td><?= $ds['212395_Nama_Matkul']; ?></td>
+                                            <td><?= $ds['212395_Nama_Dosen']; ?></td>
                                             <td>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
+                                                <a style="padding: 1px 4px;" href="/nilai/listM/<?= $ds['kode']; ?>" class="btn btn-primary">
                                                     <i class="ri-edit-box-line"></i>
                                                 </a>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                    <i class="bi-trash-fill"></i>
-                                                </a>
+
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

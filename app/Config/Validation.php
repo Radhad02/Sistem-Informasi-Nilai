@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Validation\ValidationRules;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Validation\StrictRules\CreditCardRules;
 use CodeIgniter\Validation\StrictRules\FileRules;
@@ -25,7 +26,9 @@ class Validation extends BaseConfig
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
+        ValidationRules::class,
     ];
+
 
     /**
      * Specifies the views that are used to display the

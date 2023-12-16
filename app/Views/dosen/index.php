@@ -20,10 +20,10 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Default Table</h5>
+                        <h5 class="card-title"></h5>
                         <div class="table-responsive">
                             <!-- Default Table -->
-                            <table class="table">
+                            <table class="table datatable">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
@@ -33,7 +33,7 @@
                                         <th scope="col">Tanggal Lahir</th>
                                         <th scope="col">Jenis Kelamin</th>
                                         <th scope="col">Kontak</th>
-                                        <th scope="col">Aksi</th>
+                                        <!-- <th scope="col">Aksi</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,19 +42,19 @@
                                         <tr>
                                             <th scope="row"><?= $i++; ?></th>
                                             <td><?= $ds['212395_NIDN']; ?></td>
-                                            <td><?= $ds['212395_Nama']; ?></td>
+                                            <td><?= $ds['212395_Nama_Dosen']; ?></td>
                                             <td><?= $ds['212395_Alamat']; ?></td>
                                             <td><?= $ds['212395_Tanggal_Lahir']; ?></td>
                                             <td><?= $ds['212395_jkl']; ?></td>
                                             <td><?= $ds['212395_Kontak']; ?></td>
-                                            <td>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
+                                            <!-- <td>
+                                                <a style="padding: 1px 4px;" href="/dosen/edit/<?= $ds['212395_Id'] ?>" class="btn btn-primary">
                                                     <i class="ri-edit-box-line"></i>
                                                 </a>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
+                                                <a style="padding: 1px 4px;" href="/dosen/delete/<?= $ds['212395_Id'] ?>" onclick="return confirm ('Apakah Anda Yakin')" class="btn btn-danger">
                                                     <i class="bi-trash-fill"></i>
                                                 </a>
-                                            </td>
+                                            </td> -->
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -68,5 +68,6 @@
     </section>
 
 </main>
+
 
 <?= $this->endSection(); ?>

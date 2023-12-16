@@ -5,11 +5,11 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Form Elements</h1>
+        <h1>Data Mahasiswa</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Mahasiswa</li>
+                <li class="breadcrumb-item"><a href="/mahasiswa/Data_Mahasiswa">Data Mahasiswa</a></li>
                 <li class="breadcrumb-item active">Input Data</li>
             </ol>
         </nav>
@@ -26,6 +26,7 @@
                             <div class="card-body col-md-5">
                                 <div class="alert alert-danger alert-dismissible">
                                     <h5><i class="ri-alert-line"></i>Data Mahasiswa</h5>
+                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="alert" aria-label="Close"></button>
                                     <?= session()->getFlashdata('errors'); ?>
                                 </div>
                             </div>
@@ -83,7 +84,13 @@
                             <div class="row mb-3">
                                 <label class="col-sm-2 col-form-label">Jurusan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="212395_Jurusan" class="form-control">
+                                    <select name="212395_Jurusan" class="form-select" aria-label="Default select example">
+                                        <option selected>---Pilih Jurusan---</option>
+                                        <option value="Teknik Informatika">Teknik Informatika</option>
+                                        <option value="Sistem Informasi">Sistem Informasi</option>
+                                        <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+                                        <option value="Bisnis Digital">Bisnis Digital</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="row mb-4">

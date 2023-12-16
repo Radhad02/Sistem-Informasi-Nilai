@@ -5,7 +5,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>Form Elements</h1>
+        <h1>Data Dosen</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
@@ -18,11 +18,18 @@
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
-
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Input Data Dosen</h5>
-
+                        <?php if (session()->getFlashdata('errors')) : ?>
+                            <div class="card-body col-lg-5">
+                                <div class="alert alert-danger alert-dismissible">
+                                    <h5><i class="ri-alert-line"></i>Data Dosen</h5>
+                                    <button type="button" class="btn-close btn-close-black" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    <?= session()->getFlashdata('errors'); ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
                         <!-- General Form Elements -->
                         <form action="/dosen/save" method="post">
                             <div class="row mb-3">
@@ -34,7 +41,7 @@
                             <div class="row mb-3">
                                 <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="212395_Nama" class="form-control">
+                                    <input type="text" name="212395_Nama_Dosen" class="form-control">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -49,16 +56,23 @@
                                     <input type="date" name="212395_Tanggal_Lahir" class="form-control">
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                            <fieldset class="row mb-3">
+                                <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
                                 <div class="col-sm-10">
-                                    <select name="212395_jkl" class="form-select" aria-label="Default select example">
-                                        <option selected>---Pilih---</option>
-                                        <option name="212395_jkl" value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
+                                    <div class="form-check form-check-inline ">
+                                        <input class="form-check-input" type="radio" name="212395_jkl" id="gridRadios1" value="Laki-Laki">
+                                        <label class="form-check-label" for="gridRadios1">
+                                            Laki-Laki
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <input class="form-check-input" type="radio" name="212395_jkl" id="gridRadios2" value="Perempuan">
+                                        <label class="form-check-label" for=" gridRadios2">
+                                            Perempuan
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
+                            </fieldset>
                             <div class="row mb-3">
                                 <label for="inputNumber" class="col-sm-2 col-form-label">Kontak</label>
                                 <div class="col-sm-10">

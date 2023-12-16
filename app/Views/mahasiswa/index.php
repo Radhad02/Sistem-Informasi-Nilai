@@ -9,21 +9,22 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                <li class="breadcrumb-item">Mahasiswa</li>
+                <li class="breadcrumb-item"><a href=""></a>Mahasiswa</li>
                 <li class="breadcrumb-item active">Data Mahasiswa</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
+
+    <button onclick="bukaPDFdiTabBaru()">Buka PDF</button>
 
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Default Table</h5>
                         <div class="table-responsive">
                             <!-- Default Table -->
-                            <table class="table">
+                            <table class="table datatable mt-2">
                                 <thead>
                                     <tr>
                                         <th scope="col">No</th>
@@ -33,7 +34,6 @@
                                         <th scope="col">Tanggal Lahir</th>
                                         <th scope="col">Jenis Kelamin</th>
                                         <th scope="col">Jurusan</th>
-                                        <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -47,14 +47,6 @@
                                             <td><?= $ds['212395_Tanggal_Lahir']; ?></td>
                                             <td><?= $ds['212395_Jkl']; ?></td>
                                             <td><?= $ds['212395_Jurusan']; ?></td>
-                                            <td>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
-                                                    <i class="ri-edit-box-line"></i>
-                                                </a>
-                                                <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                    <i class="bi-trash-fill"></i>
-                                                </a>
-                                            </td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -68,5 +60,14 @@
     </section>
 
 </main>
+<script>
+    function bukaPDFdiTabBaru() {
+        // Ganti 'url_to_your_controller/export_pdf' dengan URL yang sesuai pada controller Anda
+        var url = 'export_pdf';
+
+        // Membuka URL dalam tab baru
+        window.open(url, '_blank');
+    }
+</script>
 
 <?= $this->endSection(); ?>

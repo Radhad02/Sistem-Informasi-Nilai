@@ -26,9 +26,15 @@
   <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
+  <script src="/assets/js/jquery-3.7.1.min.js"></script>
+
   <!-- Template Main CSS File -->
   <link href="/assets/css/style.css" rel="stylesheet">
 
+
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
   <!-- =======================================================
   * Template Name: NiceAdmin
   * Updated: Sep 18 2023 with Bootstrap v5.3.2
@@ -78,6 +84,7 @@
   <script src="/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+
   <script src="/assets/js/main.js"></script>
 
 </body>

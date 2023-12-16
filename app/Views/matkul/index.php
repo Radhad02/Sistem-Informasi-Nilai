@@ -23,31 +23,35 @@
                         <h5 class="card-title">Default Table</h5>
                         <div class="table-responsive">
                             <!-- Default Table -->
-                            <table class="table">
+                            <table class="table datatable">
                                 <thead>
-                                    <tr>
+                                    <tr style="text-align:center ;">
+                                        <th scope="col">No</th>
                                         <th scope="col">Kode</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">SKS</th>
-                                        <th scope="col">Nama Dosen</th>
+                                        <!-- <th scope="col">Nama Dosen</th> -->
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>212395</td>
-                                        <td>Coba</td>
-                                        <td>Jl. Keabadian</td>
-                                        <td>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-primary">
-                                                <i class="ri-edit-box-line"></i>
-                                            </a>
-                                            <a style="padding: 1px 4px;" href="/DataSiswa/input" class="btn btn-danger">
-                                                <i class="bi-trash-fill"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    <?php $i = 1 + (10 * ($currentPage - 1)); ?>
+                                    <?php foreach ($datamatkul  as $ds) : ?>
+                                        <tr style="text-align: center;">
+                                            <th scope="row"><?= $i++; ?></th>
+                                            <td><?= $ds['212395_Kode']; ?></td>
+                                            <td style="text-align: left;"><?= $ds['212395_Nama_Matkul']; ?></td>
+                                            <td><?= $ds['212395_SKS']; ?></td>
+                                            <td>
+                                                <a style="padding: 1px 4px;" href="/matkul/edit/<?= $ds['212395_Id'] ?>" class="btn btn-primary">
+                                                    <i class="ri-edit-box-line"></i>
+                                                </a>
+                                                <a style="padding: 1px 4px;" href="/matkul/delete/<?= $ds['212395_Id'] ?>" class="btn btn-danger">
+                                                    <i class="bi-trash-fill"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                             <!-- End Default Table Example -->
